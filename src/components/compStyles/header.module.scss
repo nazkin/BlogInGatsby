@@ -1,0 +1,31 @@
+
+.header {
+    padding: 1rem 0 3rem;
+}
+
+.title {
+    color: #d3d3d3;
+    font-size: 3rem;
+    text-decoration: none;
+}
+.navList{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+}
+.navLink {
+    color: darkcyan;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-right: 0.8rem;
+}
+
+.navLink:hover {
+    color: rgb(2, 100, 100);
+}
+.activeNavLink {
+    color: rgb(16, 65, 65);
+    border-bottom: 1px dotted rgb(16, 65, 65);
+}

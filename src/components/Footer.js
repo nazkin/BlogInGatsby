@@ -3,10 +3,10 @@ import React from 'react'
 const Footer = () => {
 
     return (
-        <div>
-            Footer
-        </div>
+        <footer>
+            <p>Created by: Nazar Kinash || Copyright 2020</p>
+        </footer>
     )
 }
 
-export default Footer
+export default Footer;
