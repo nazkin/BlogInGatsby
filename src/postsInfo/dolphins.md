@@ -8,7 +8,7 @@ have suffered alteration in some form, by injected humour, or randomised words w
 don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, 
 you need to be sure there isn't anything embarrassing hidden in the middle of text. 
 
-## Topics Covered
+### Topics Covered
 
 1. How did dolphins evolve
 2. Why dolphins are so beloved by humans
