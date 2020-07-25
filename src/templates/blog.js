@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import {graphql} from 'gatsby'
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 import styles from './templateStyles/templateBlog.module.scss';
 
 export const data = graphql`

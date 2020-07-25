@@ -40,7 +40,7 @@ const Blog = (props) => {
                     <h2 className={styles.blogTitle}>{edge.node.frontmatter.title}</h2>
                     <p className={styles.blogDate}>{edge.node.frontmatter.date}</p>
 
-                </div>
+                </div> 
                 {/* <div>
                     {contentHTML}
                 </div> */}
