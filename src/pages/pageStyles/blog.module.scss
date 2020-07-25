@@ -6,7 +6,11 @@
     margin-bottom: 0.5rem;
     padding-top: 1rem;
     vertical-align: center;
-    
+    padding-left: 0.8rem;
+    cursor: pointer;
+}
+.blogHeader:hover{
+    background-color: #F2F2F2;
 }
 .blogTitle{
     color:  rgb(2, 100, 100);

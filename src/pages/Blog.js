@@ -3,9 +3,9 @@ import Layout from '../components/Layout'
 import {graphql, useStaticQuery} from 'gatsby'
 import styles from './pageStyles/blog.module.scss'
 
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 
-const Blog = () => {
+const Blog = (props) => {
+ 
 
     const data = useStaticQuery(graphql`
         query{
@@ -16,29 +16,34 @@ const Blog = () => {
                             title,
                             date
                         },
-                        html
+                        fields{
+                            slug
+                        }
                     }
                 }
             }
         }
-    `)
-    let edgesData = data.allMarkdownRemark.edges;
-    console.log(data.allMarkdownRemark);
+    `);
+
+
+    const navHandler = (slug)=> {
+        props.navigate(`/Blog/${slug}`);
+    }
 
     const blogs = data.allMarkdownRemark.edges.map(edge => {
-        const content = edge.node.html;
-        const contentHTML = ReactHtmlParser(content);
-        console.log(edge.node.html)
+
+        let blogSlug = edge.node.fields.slug;
         return (
-            <div key={edge.node.frontmatter.title + edge.node.frontmatter.date}>
-                <div className={styles.blogHeader}>
+            <div key={blogSlug}>
+                <div onClick={()=> navHandler(blogSlug)} className={styles.blogHeader}>
+
                     <h2 className={styles.blogTitle}>{edge.node.frontmatter.title}</h2>
                     <p className={styles.blogDate}>{edge.node.frontmatter.date}</p>
-                </div>
-                <div>
-                    {contentHTML}
-                </div>
 
+                </div>
+                {/* <div>
+                    {contentHTML}
+                </div> */}
             </div>
         )
     })
